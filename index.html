@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ASM IDE</title>
+    <meta name="viewport" content="user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+  <link href="/asm-ide/static/css/vendors.css?v=245de90edd" rel="stylesheet"><link href="/asm-ide/static/css/index.css?v=245de90edd" rel="stylesheet"></head>
+  <body>
+    <div id="app">
+      <div class="header">
+        <div class="header-logo">
+          <i class="asm-icon">&#xe722;</i>
+        </div>
+        <div class="header-right">
+          <div class="header-btn header-help asm-btn">
+            <i class="asm-icon">&#xe624;</i>
+            说明书
+          </div>
+          <div class="header-guide asm-modal">
+            <div class="asm-modal-mask"></div>
+            <div class="asm-modal-content">
+              <div class="asm-modal-close asm-icon">&#xe615;</div>
+              <div class="header-guide-title">说明书</div>
+              <div class="header-guide-tabs">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="asm-btn header-btn header-title">
+          <i class="asm-icon">&#xe732;</i>
+          AXE / asm-ide
+        </div>
+      </div>
+      <div class="app-main">
+        <div id="code">
+          <div class="code-controller">
+            <div class="code-controller-tabs">
+            </div>
+            <div class="code-controller-op">
+              <div class="asm-btn code-btn code-run-btn">
+                <i class="asm-icon run-icon">&#xe64f;</i>
+                <i class="asm-icon asm-loading">&#xe65d;</i>
+                运行
+              </div>
+              <div class="asm-btn code-btn code-continue-btn">
+                <i class="asm-icon">&#xe609;</i>
+                继续
+              </div>
+              <div class="asm-btn code-btn code-step-btn">
+                <i class="asm-icon">&#xe8c1;</i>
+                单步
+              </div>
+              <div class="asm-btn code-btn code-stop-btn">
+                <i class="asm-icon">&#xe628;</i>
+                暂停
+              </div>
+            </div>
+          </div>
+          <div class="code-editor-wrapper">
+            <div></div>
+            <div></div>
+          </div>
+          <div class="code-debugger">
+
+          </div>
+        </div>
+        <div class="display">
+          <div class="display-screen">
+            <canvas id="screen" width="400" height="400"></canvas>
+          </div>
+          <div class="display-stat">
+            <div class="display-stat-tabs">
+              <div class="active" data-key="register">寄存器</div>
+              <div data-key="memory">Memory</div>
+              <div data-key="console">Console<span class="console-count">0</span></div>
+            </div>
+            <div class="display-stat-tab-pane">
+              <div class="display-registers active" data-key="register"></div>
+              <div class="display-memory" data-key="memory">
+                <div id="memory-slider"></div>
+                <div class="display-memory-content-wrapper">
+                  <div class="display-memory-content"></div>
+                </div>
+              </div>
+              <div data-key="console">console</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="app-footer">
+      </div>
+    </div>
+  <script type="text/javascript" src="/asm-ide/static/js/vendors.js?v=226849dce1"></script><script type="text/javascript" src="/asm-ide/static/js/index.js?v=245de90edd"></script></body>
+</html>
